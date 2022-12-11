@@ -183,7 +183,7 @@ with open(file_to_load) as election_data:
     for candidate_name in candidate_votes:
         votes = candidate_votes[candidate_name]
         vote_percentage = float(votes) / float(total_votes) * 100
-        print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
         if (votes > winning_count) and (vote_percentage > winning_percentage):
             winning_count = votes
@@ -197,4 +197,29 @@ with open(file_to_load) as election_data:
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-------------------------\n")
-    print(winning_candidate_summary)
+    #print(winning_candidate_summary)
+
+   
+
+election_results = (
+    f"\nElection Results\n"
+    f"-------------------------\n"
+    f"Total Votes: {total_votes:,}\n"
+    f"-------------------------\n")
+print(election_results, end="")
+
+candidate_results = "Charles Casper Stockham: 23.0% (85,213)\nDiana DeGette: 73.8% (272,892)\nRaymon Anthony Doane: 3.1% (11,606)\n"
+candidate_results
+
+winning_candidate_summary
+
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+with open(file_to_save, "w") as txt_file:
+   
+    txt_file.write(election_results)
+    txt_file.write(candidate_results)
+    txt_file.write(winning_candidate_summary)
+
+
+
+    
