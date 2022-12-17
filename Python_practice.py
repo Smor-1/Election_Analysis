@@ -27,13 +27,18 @@ mylist[1:]
 #appending to a list 
 mylist.append("Ottawa")
 mylist
+
 #choosing Boston to be inserted at index 0, super helpful 
 mylist.insert(0, "Boston")
+
 #removes a value
 mylist.remove("Boston")
 #can also use .pop() to remove an item from a specific index location, it will return what was removed too
 mylist.pop(0)
 mylist
+
+mylist.index("whatever you want to find")
+#returns the index of the first object with a matching value 
 
 
 mylist[0] = "New Denver"
