@@ -45,6 +45,8 @@ with open(file_to_load) as election_data:
         # Add to the total vote count
         total_votes = total_votes + 1
 
+    print(total_votes)
+
         # Get the candidate name from each row.
         candidate_name = row[2]
 
